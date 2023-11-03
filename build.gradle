@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.github.bonigarcia:webdrivermanager:5.5.3'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.12.1'
+    implementation 'com.codeborne:selenide:6.19.0'
+    implementation 'io.qameta.allure:allure-junit5:2.23.0'
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: '5.3.1'
+    implementation('io.cucumber:cucumber-java:5.0.0')
+    implementation 'io.cucumber:cucumber-junit:5.0.0'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    implementation('org.slf4j:slf4j-api:1.7.30')
+    implementation 'io.rest-assured:rest-assured:4.4.0'
+    implementation 'io.cucumber:cucumber-picocontainer:7.13.0'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'com.codeborne:selenide:6.19.0'
+    testImplementation 'org.testng:testng:7.8.0'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'io.cucumber:cucumber-java:7.13.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.13.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
