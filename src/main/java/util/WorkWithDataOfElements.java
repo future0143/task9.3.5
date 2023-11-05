@@ -10,7 +10,6 @@ public class WorkWithDataOfElements {
 
     public static int convertTextPriceToNumber(String textOfElement) {
         String expectedTotalAmountText = textOfElement.replaceAll("[^0-9]", ""); // Преобразуем строку в число, удаляя пробелы
-        System.out.println(expectedTotalAmountText);
 
         return Integer.parseInt(expectedTotalAmountText);
     }

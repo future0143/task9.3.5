@@ -8,6 +8,7 @@ import validator.ValidateSearchResultsOfAirTickets;
 import java.time.LocalDate;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class FormForAirTickets {
 
@@ -17,6 +18,7 @@ public class FormForAirTickets {
     public static By dateContainerSelector = By.className("ant-picker-panels");
     public static By attributeForDates = By.cssSelector("td[title]");
     public static By buttonPassengers = By.cssSelector("div.ant-dropdown-trigger");
+    public static By buttonCounter = By.cssSelector("svg[class*='_button-module__icon']");
     public static By buttonSearchTickets = By.cssSelector("button[class*='_button-module__button'][class*='_selector-form-module__button']");
 
 
@@ -51,8 +53,9 @@ public class FormForAirTickets {
     }
 
     public FormForAirTickets clickPassengers(int countClick) {
-        for (int i = 1; i <= countClick; i++) {
-            $(buttonPassengers).click();
+        $(buttonPassengers).click();
+        for (int i = 1; i < countClick; i++) {
+            $$(buttonCounter).get(1).click();
         }
 
         return this;
